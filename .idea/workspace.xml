@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa35202-8130-45fa-8c14-03c042a0f18c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Watapend.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/watapend/domain/SourceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/watapend/domain/SourceIT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Auteur.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Auteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Nouveaute.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Nouveaute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/watapend/domain/NouveauteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/watapend/domain/NouveauteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Nouveautes.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Nouveautes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Resume.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Resume.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/RssSource.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/RssSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Source.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Source.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/Watapend.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/Watapend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/watapend/WatapendTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/watapend/WatapendTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java" />
     </list>
     <ignored path="Watapend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,7 +124,7 @@
       <file leaf-file-name="WatapendServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="16" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.36585367">
+            <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.8442777">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -847,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.36585367">
+        <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.8442777">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

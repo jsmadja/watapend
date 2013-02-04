@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa35202-8130-45fa-8c14-03c042a0f18c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java" afterPath="$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Watapend.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Watapend.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359984612755" ignored="false" />
     <file path="/fragment.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359982599476" ignored="false" />
-    <file path="/pom.xml" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359975266707" ignored="false" />
+    <file path="/pom.xml" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359985861991" ignored="false" />
     <file path="/WatapendTest.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359983407874" ignored="false" />
     <file path="/Source.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359982764627" ignored="false" />
     <file path="/Nouveautes.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359982794563" ignored="false" />
@@ -50,6 +51,7 @@
     <file path="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_25.xml" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359982922093" ignored="false" />
     <file path="/Server.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359984404090" ignored="false" />
     <file path="/WatapendServer.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359984291828" ignored="false" />
+    <file path="$PROJECT_DIR$/../cautions/src/test/java/com/financeactive/cautions/domain/caution/AutorisationTest.java" changelist="3fa35202-8130-45fa-8c14-03c042a0f18c" time="1359986317419" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,10 +111,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Sources.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Sources.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+            <state line="30" column="70" selection-start="1109" selection-end="1180" vertical-scroll-proportion="0.8442777">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#425#433#0" expanded="true" />
@@ -121,13 +123,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WatapendServer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WatapendServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.8442777">
+            <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="28" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assembly.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,10 +170,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/watapend/domain/Auteur.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/watapend/domain/SourceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/watapend/domain/SourceIT.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/watapend/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/watapend/domain/Source.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/watapend/domain/Nouveautes.java" />
@@ -166,6 +184,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/watapend/WatapendIT.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/assembly/assembly.xml" />
       </list>
     </option>
   </component>
@@ -358,6 +378,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Watapend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watapend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assembly" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -713,13 +755,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/domain/TypeSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/domain/Auteur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="38" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
@@ -730,13 +765,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.0/mockito-all-1.9.0-sources.jar!/org/mockito/internal/creation/MethodInterceptorFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="21" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -823,21 +851,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+        <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#425#433#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/WatapendServer.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="39" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.8442777">
+        <state line="71" column="28" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/watapend/domain/Sources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="70" selection-start="1109" selection-end="1180" vertical-scroll-proportion="0.8442777">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#425#433#0" expanded="true" />
           </folding>
         </state>
       </provider>

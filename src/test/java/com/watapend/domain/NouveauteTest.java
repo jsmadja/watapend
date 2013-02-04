@@ -27,9 +27,9 @@ public class NouveauteTest {
 
         Auteur auteur = Mockito.mock(Auteur.class);
         when(auteur.getNom()).thenReturn("Ken Bogard");
-        Nouveaute nouveaute = new Nouveaute(parse("2013-01-01"), source, auteur, "Topanga League");
+        Nouveaute nouveaute = new Nouveaute(parse("2013-01-01"), source, auteur, "Topanga League", "http://www.kb.com/tpl");
 
-        assertThat(nouveaute.toString()).isEqualTo("Ken Bogard a publié une nouvelle vidéo sur Youtube : Topanga League");
+        assertThat(nouveaute.toString()).isEqualTo("Ken Bogard a publié une nouvelle vidéo sur Youtube : <a href='http://www.kb.com/tpl'>Topanga League</a>");
         assertThat(nouveaute.getDate()).isEqualTo(parse("2013-01-01"));
     }
 
@@ -42,16 +42,16 @@ public class NouveauteTest {
 
         Auteur auteur = Mockito.mock(Auteur.class);
         when(auteur.getNom()).thenReturn("Julien C");
-        Nouveaute nouveaute = new Nouveaute(parse("2013-01-01"), source, auteur, "Teaser PS4", ARTICLE);
+        Nouveaute nouveaute = new Nouveaute(parse("2013-01-01"), source, auteur, "Teaser PS4", ARTICLE, "http");
 
-        assertThat(nouveaute.toString()).isEqualTo("Julien C a publié un nouvel article sur Gameblog : Teaser PS4");
+        assertThat(nouveaute.toString()).isEqualTo("Julien C a publié un nouvel article sur Gameblog : <a href='http'>Teaser PS4</a>");
     }
 
     @Test
     public void doit_trier_les_nouveautes_par_ordre_ante_chronologique() {
-        Nouveaute nouveaute1 = new Nouveaute(DateMidnight.parse("2012-01-01"), mock(Source.class), mock(Auteur.class), "titre1");
-        Nouveaute nouveaute2 = new Nouveaute(DateMidnight.parse("2010-01-01"), mock(Source.class), mock(Auteur.class), "titre2");
-        Nouveaute nouveaute3 = new Nouveaute(DateMidnight.parse("2013-01-01"), mock(Source.class), mock(Auteur.class), "titre3");
+        Nouveaute nouveaute1 = new Nouveaute(DateMidnight.parse("2012-01-01"), mock(Source.class), mock(Auteur.class), "titre1", "http");
+        Nouveaute nouveaute2 = new Nouveaute(DateMidnight.parse("2010-01-01"), mock(Source.class), mock(Auteur.class), "titre2", "http");
+        Nouveaute nouveaute3 = new Nouveaute(DateMidnight.parse("2013-01-01"), mock(Source.class), mock(Auteur.class), "titre3", "http");
 
         List<Nouveaute> nouveautes = new ArrayList<Nouveaute>();
         nouveautes.add(nouveaute1);
@@ -61,6 +61,21 @@ public class NouveauteTest {
         Collections.sort(nouveautes);
 
         assertThat(nouveautes).containsExactly(nouveaute3, nouveaute1, nouveaute2);
+    }
+
+    @Test
+    public void doit_creer_le_resume_d_une_nouveaute_de_type_video_sans_auteur() {
+        Source source = mock(Source.class);
+
+        when(source.getNom()).thenReturn("Youtube");
+        when(source.getType()).thenReturn(VIDEOS);
+
+        Auteur auteur = Mockito.mock(Auteur.class);
+        when(auteur.estAnonyme()).thenReturn(true);
+        Nouveaute nouveaute = new Nouveaute(parse("2013-01-01"), source, auteur, "Topanga League", "http");
+
+        assertThat(nouveaute.toString()).isEqualTo("une nouvelle vidéo sur Youtube : <a href='http'>Topanga League</a>");
+        assertThat(nouveaute.getDate()).isEqualTo(parse("2013-01-01"));
     }
 
 }

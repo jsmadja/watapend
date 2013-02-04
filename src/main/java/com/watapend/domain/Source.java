@@ -31,7 +31,7 @@ public abstract class Source {
         nouveautes.ajouter(nouveaute);
     }
 
-    public Nouveautes listerNouveautesALaDateDu(DateMidnight date) {
-        return nouveautes.filtrerParDate(date);
+    public Nouveautes listerNouveautesAPartirDu(DateMidnight date) {
+        return nouveautes.filtrerParDateAPartirDu(date);
     }
 }

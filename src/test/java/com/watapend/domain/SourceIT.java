@@ -8,7 +8,7 @@ import java.net.URL;
 import static com.watapend.domain.TypeSource.VARIEES;
 import static org.fest.assertions.Assertions.assertThat;
 
-public class SourceTest {
+public class SourceIT {
 
     @Test
     public void doit_creer_une_source_de_type_rss() throws MalformedURLException {

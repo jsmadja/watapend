@@ -11,16 +11,18 @@ public class Nouveaute implements Comparable<Nouveaute> {
     private final Auteur auteur;
     private DateMidnight date;
     private TypeNouveaute typeNouveaute;
+    private final String lien;
 
-    public Nouveaute(DateMidnight date, Source source, Auteur auteur, String titre) {
+    public Nouveaute(DateMidnight date, Source source, Auteur auteur, String titre, String lien) {
         this.date = date;
         this.source = source;
         this.auteur = auteur;
         this.titre = titre;
+        this.lien = lien;
     }
 
-    public Nouveaute(DateMidnight date, Source source, Auteur auteur, String titre, TypeNouveaute typeNouveaute) {
-        this(date, source, auteur, titre);
+    public Nouveaute(DateMidnight date, Source source, Auteur auteur, String titre, TypeNouveaute typeNouveaute, String lien) {
+        this(date, source, auteur, titre, lien);
         this.typeNouveaute = typeNouveaute;
     }
 
@@ -28,12 +30,20 @@ public class Nouveaute implements Comparable<Nouveaute> {
     public String toString() {
         String nomAuteur = auteur.getNom();
         String nomSource = source.getNom();
+
+        if(auteur.estAnonyme()) {
+            if(typeNouveaute == null) {
+                return format("%s sur %s : <a href='%s'>%s</a>", source.getType().getPhrase(), nomSource, lien, titre);
+            }
+            return format("%s sur %s : <a href='%s'>%s</a>", typeNouveaute.getPhrase(), nomSource, lien, titre);
+        }
+
         if(typeNouveaute == null) {
             String phrase = source.getType().getPhrase();
-            return format("%s a publié %s sur %s : %s", nomAuteur, phrase, nomSource, titre);
+            return format("%s a publié %s sur %s : <a href='%s'>%s</a>", nomAuteur, phrase, nomSource, lien, titre);
         }
         String phrase = typeNouveaute.getPhrase();
-        return format("%s a publié %s sur %s : %s", nomAuteur, phrase, nomSource, titre);
+        return format("%s a publié %s sur %s : <a href='%s'>%s</a>", nomAuteur, phrase, nomSource, lien, titre);
     }
 
     public DateMidnight getDate() {

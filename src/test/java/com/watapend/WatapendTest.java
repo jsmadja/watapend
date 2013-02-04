@@ -1,16 +1,16 @@
 package com.watapend;
 
-import com.watapend.domain.*;
+import com.watapend.domain.Nouveaute;
+import com.watapend.domain.Nouveautes;
+import com.watapend.domain.Source;
 import org.joda.time.DateMidnight;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Iterator;
 
-import static com.watapend.domain.TypeSource.ARTICLES;
 import static org.fest.assertions.Assertions.assertThat;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
 public class WatapendTest {
@@ -19,8 +19,8 @@ public class WatapendTest {
 
     @Test
     public void doit_afficher_rien_du_tout_s_il_ne_s_est_rien_passe() {
-        String resume = watapend.genereLeResumeComplet();
-        assertThat(resume).isEqualTo("");
+        String resume = watapend.genereLeResumeComplet().toString();
+        assertThat(resume).isEqualTo("<ul></ul>");
     }
 
     @Test
@@ -36,13 +36,13 @@ public class WatapendTest {
         when(nouveautes.iterator()).thenReturn(nouveautesIterator);
 
         Source sourceKenbogard = Mockito.mock(Source.class);
-        when(sourceKenbogard.listerNouveautes()).thenReturn(nouveautes);
+        when(sourceKenbogard.listerNouveautesAPartirDu(any(DateMidnight.class))).thenReturn(nouveautes);
 
         watapend.ajouterUneSource(sourceKenbogard);
 
-        String resume = watapend.genereLeResumeComplet();
+        String resume = watapend.genereLeResumeComplet().toString();
 
-        assertThat(resume).isEqualTo("Ken Bogard a publié une nouvelle vidéo sur Youtube : Topanga League");
+        assertThat(resume).isEqualTo("<ul><li>Ken Bogard a publié une nouvelle vidéo sur Youtube : Topanga League</li></ul>");
     }
 
     @Test
@@ -61,36 +61,13 @@ public class WatapendTest {
 
         when(nouveautes.iterator()).thenReturn(nouveautesIterator);
 
-        when(sourceKenbogard.listerNouveautes()).thenReturn(nouveautes);
+        when(sourceKenbogard.listerNouveautesAPartirDu(any(DateMidnight.class))).thenReturn(nouveautes);
 
         watapend.ajouterUneSource(sourceKenbogard);
 
-        String resume = watapend.genereLeResumeComplet();
+        String resume = watapend.genereLeResumeComplet().toString();
 
-        assertThat(resume).isEqualTo("nouveauté 1\nnouveauté 2");
-    }
-
-    @Test
-    public void doit_lister_les_nouveautes_de_plusieurs_sources() throws MalformedURLException {
-        watapend.ajouterUneSource(new RssSource("Bas Gros Poing", new URL("http://basgrospoing.fr/feed/")));
-        watapend.ajouterUneSource(new RssSource("Xebia", new URL("http://blog.xebia.fr/feed/?dualfeed=2")));
-
-        String resume = watapend.genereLeResumeComplet();
-
-        assertThat(resume.isEmpty()).isFalse();
-
-        System.err.println(resume);
-    }
-
-    @Test
-    public void doit_lister_les_nouveautes_du_jour() throws MalformedURLException {
-        watapend.ajouterUneSource(new RssSource("Le Monde", ARTICLES, new URL("http://www.lemonde.fr/rss/")));
-
-        String resume = watapend.genereLeResumeALaDateDu(DateMidnight.now());
-
-        assertThat(resume.isEmpty()).isFalse();
-
-        System.err.println(resume);
+        assertThat(resume).isEqualTo("<ul><li>nouveauté 1</li>\n<li>nouveauté 2</li></ul>");
     }
 
 }

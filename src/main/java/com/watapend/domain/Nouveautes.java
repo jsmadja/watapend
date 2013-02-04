@@ -36,11 +36,12 @@ public class Nouveautes implements Iterable<Nouveaute> {
         this.nouveautes.add(nouveaute);
     }
 
-    public Nouveautes filtrerParDate(final DateMidnight date) {
+    public Nouveautes filtrerParDateAPartirDu(final DateMidnight date) {
         return new Nouveautes(filter(nouveautes, new Predicate<Nouveaute>() {
             @Override
             public boolean apply(Nouveaute nouveaute) {
-                return nouveaute.getDate().equals(date);
+                DateMidnight dateNouveaute = nouveaute.getDate();
+                return dateNouveaute.equals(date) || dateNouveaute.isAfter(date);
             }
         }));
     }

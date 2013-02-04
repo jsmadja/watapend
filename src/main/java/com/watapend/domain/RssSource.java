@@ -52,9 +52,10 @@ public class RssSource extends Source {
         DateMidnight date = new DateMidnight(entry.getPublishedDate());
         Auteur auteur = new Auteur(entry.getAuthor());
         String titre = entry.getTitle();
+        String link = entry.getLink();
         if(entry.getEnclosures().isEmpty()) {
-            return new Nouveaute(date, this, auteur, titre, ARTICLE);
+            return new Nouveaute(date, this, auteur, titre, ARTICLE, link);
         }
-        return new Nouveaute(date, this, auteur, titre, PODCAST);
+        return new Nouveaute(date, this, auteur, titre, PODCAST, link);
     }
 }

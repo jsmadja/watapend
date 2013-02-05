@@ -26,6 +26,7 @@ public class Sources implements Iterable<Source> {
         try {
             Sources sources = new Sources();
             sources.ajouter(new RssSource("Bas Gros Poing", VARIEES, new URL("http://basgrospoing.fr/feed/")));
+            sources.ajouter(new RssSource("Gameblog", ARTICLES, new URL("http://www.gameblog.fr/rss.php")));
             sources.ajouter(new RssSource("Xebia", ARTICLES, new URL("http://blog.xebia.fr/feed/?dualfeed=2")));
             sources.ajouter(new RssSource("Octo", ARTICLES, new URL("http://blog.octo.com/feed/")));
             sources.ajouter(new RssSource("Youtube", VIDEOS, new URL("http://gdata.youtube.com/feeds/base/users/anzymus/newsubscriptionvideos")));
